@@ -30,7 +30,6 @@ public class ImageMessage implements Message {
     private String uri;
     private Date timestamp;
 
-    // Constructors
     public ImageMessage(Long senderId, Long receiverId, Long productId, String senderName, String receiverName,
                         String content, String messageType) {
         this.senderId = senderId;
@@ -45,7 +44,6 @@ public class ImageMessage implements Message {
 
 
 
-    // Message interface methods
     @Override
     public String getContent() {
         return uri;

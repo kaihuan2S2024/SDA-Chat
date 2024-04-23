@@ -33,11 +33,6 @@ public class MessageController {
                 message.getType()
         );
 
-        // Send the message to the appropriate WebSocket topic
-//        messagingTemplate.convertAndSendToUser(
-//                message.getReceiverId().toString(),
-//                "/queue/messages",
-//                savedMessage);
         messagingTemplate.convertAndSend("/topic/" + message.getProductId(), savedMessage);
 
         return savedMessage;

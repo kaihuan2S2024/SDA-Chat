@@ -30,9 +30,8 @@ public class TextMessage implements Message {
     private String content;
     private Date timestamp;
 
-    // Constructors
-    public TextMessage(Long senderId, Long receiverId, Long productId, String senderName, String receiverName,
-                       String content, String messageType) {
+    public TextMessage(Long senderId, Long receiverId, Long productId, String senderName,
+                       String receiverName, String content, String messageType) {
         this.senderId = senderId;
         this.receiverId = receiverId;
         this.productId = productId;
@@ -43,7 +42,6 @@ public class TextMessage implements Message {
         this.timestamp = new Date();
     }
 
-    // Message interface methods
     @Override
     public String getContent() {
         return content;

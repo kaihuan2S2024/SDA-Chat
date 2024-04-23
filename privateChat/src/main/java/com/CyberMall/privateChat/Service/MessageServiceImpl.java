@@ -25,13 +25,16 @@ public class MessageServiceImpl implements MessageService {
     private ImageMessageFactory imageMessageFactory;
 
     @Override
-    public Message createMessage(Long senderId, Long receiverId, Long productId, String senderName, String receiverName,
+    public Message createMessage(Long senderId, Long receiverId, Long productId,
+                                 String senderName, String receiverName,
                                  String message, String messageType) {
         Message messageObject;
         if ("text".equalsIgnoreCase(messageType)) {
-            messageObject = textMessageFactory.createMessage(senderId, receiverId, productId, senderName, receiverName, message, messageType);
+            messageObject = textMessageFactory.createMessage(senderId, receiverId, productId,
+                                            senderName, receiverName, message, messageType);
         } else if ("image".equalsIgnoreCase(messageType)) {
-            messageObject = imageMessageFactory.createMessage(senderId, receiverId, productId, senderName, receiverName, message, messageType);
+            messageObject = imageMessageFactory.createMessage(senderId, receiverId, productId,
+                                            senderName, receiverName, message, messageType);
         } else {
             throw new IllegalArgumentException("Unsupported message type: " + messageType);
         }
@@ -60,8 +63,6 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List<Message> getMessagesByProductId(Long productId) {
-
-        // Getting all messages from sender to receiver and receiver to sender
         return messageRepo.findByProductId(productId);
     }
 }
