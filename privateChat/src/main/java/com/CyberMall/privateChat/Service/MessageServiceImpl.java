@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
 
+
+// Message Service Implementation
 @Service
 public class MessageServiceImpl implements MessageService {
 
@@ -24,6 +26,7 @@ public class MessageServiceImpl implements MessageService {
     @Autowired
     private ImageMessageFactory imageMessageFactory;
 
+    // Create Message
     @Override
     public Message createMessage(Long senderId, Long receiverId, Long productId,
                                  String senderName, String receiverName,
@@ -41,12 +44,13 @@ public class MessageServiceImpl implements MessageService {
         return messageRepo.save(messageObject);
     }
 
-
+    // Get All Messages
     @Override
     public List<Message> getAllMessages() {
         return messageRepo.findAll();
     }
 
+    // Get Messages by Sender and Receiver
     @Override
     public List<Message> getMessagesBySenderAndReceiver(Long senderId, Long receiverId) {
 
@@ -61,6 +65,7 @@ public class MessageServiceImpl implements MessageService {
         return allMessages;
     }
 
+    // Get Messages by Product Id
     @Override
     public List<Message> getMessagesByProductId(Long productId) {
         return messageRepo.findByProductId(productId);

@@ -5,6 +5,8 @@ import com.CyberMall.privateChat.Model.TextMessage;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+
+// Concrete Text Message Factory
 @Component
 @Primary
 public class TextMessageFactory extends MessageFactory {

@@ -4,6 +4,7 @@ import com.CyberMall.privateChat.Model.Message;
 
 import java.util.List;
 
+// Message Service
 public interface MessageService {
 
     Message createMessage(Long senderId, Long receiverId, Long productId, String senderName, String receiverName,

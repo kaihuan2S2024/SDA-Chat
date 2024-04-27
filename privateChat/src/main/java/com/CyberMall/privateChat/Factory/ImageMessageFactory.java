@@ -4,6 +4,7 @@ import com.CyberMall.privateChat.Model.Message;
 import com.CyberMall.privateChat.Model.ImageMessage;
 import org.springframework.stereotype.Component;
 
+// Concrete Image Message Factory
 @Component
 public class ImageMessageFactory extends MessageFactory {
     @Override

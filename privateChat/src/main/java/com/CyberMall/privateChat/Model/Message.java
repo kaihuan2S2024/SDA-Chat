@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = TextMessage.class, name = "text"),
         @JsonSubTypes.Type(value = ImageMessage.class, name = "image")
 })
+
+//  Message Interface
 public interface Message {
     String getContent();
     String getType();

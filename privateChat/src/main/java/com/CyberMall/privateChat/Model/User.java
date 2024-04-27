@@ -8,6 +8,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
+/**
+ * This user class is used during development to test the user service
+ * All User controller, class, and repo are not used for the project
+ */
 @Document
 @Data
 @NoArgsConstructor

@@ -5,6 +5,11 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
+
+/**
+ * This repo is used during development to test the user service
+ * All User controller, class, and repo are not used for the project
+ */
 public interface UserRepo extends MongoRepository<User,Integer> {
 
     List<User> findAll();

@@ -20,6 +20,11 @@ public class MessageController {
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
+    /**
+     * this function is used to create a message
+     * @param message
+     * @return
+     */
     @PostMapping
     public Message createMessage(
             @RequestBody Message message) {
@@ -38,11 +43,20 @@ public class MessageController {
         return savedMessage;
     }
 
+    /**
+     * this function is used to get all messages
+     * @return
+     */
     @GetMapping
     public List<Message> getAllMessages() {
         return messageService.getAllMessages();
     }
 
+    /**
+     * this function is used to get messages of a specific product by its id
+     * @param productId
+     * @return
+     */
     @GetMapping("/{productId}")
     public List<Message> getMessagesByProduct(
             @PathVariable Long productId

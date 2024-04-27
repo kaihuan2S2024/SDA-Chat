@@ -9,6 +9,8 @@ import lombok.*;
 
 import java.util.Date;
 
+
+// Concrete Text Message
 @Document
 @Data
 @AllArgsConstructor

@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This controller is used during development to test the user service
+ * All User controller, class, and repo are not used for the project
+ */
 @RestController
 public class UserController {
 
